@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standard Integrals (LaTeX with MathJax)</title>
+  <!-- MathJax v3 for LaTeX rendering -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #101733;
+      --text: #e8ecf8;
+      --muted: #93a1c8;
+      --accent: #5b8cff;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, #121a3a 0%, var(--bg) 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 860px; margin: 6vh auto; padding: 24px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      margin: 0 0 8px;
+      letter-spacing: 0.3px;
+    }
+    p.sub { margin: 0 0 22px; color: var(--muted); }
+    .block { border-left: 3px solid var(--accent); padding: 14px 16px; margin: 22px 0; background: rgba(91,140,255,0.06); border-radius: 10px; }
+    .kicker { font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; font-size: 12px; }
+    .formula { margin: 14px 0; }
+    .num { font-weight: 700; color: var(--muted); margin-top: 18px; }
+    .footer { color: var(--muted); font-size: 12px; margin-top: 20px; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f5f7ff; --card: #ffffff; --text: #0f1535; --muted: #5b6788; --accent: #3556ff; }
+      body { background: radial-gradient(1200px 800px at 20% 0%, #eaf0ff 0%, var(--bg) 60%), var(--bg); }
+      .card { background: #fff; }
+      .block { background: rgba(53,86,255,0.07); }
+    }
+    pre { user-select: all; overflow: auto; background: #0c132b; color: #c7d2fe; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="kicker">Math Notes</div>
+      <h1>Standard Integrals</h1>
+           <!-- Page 1 -->
+      <div class="num">1.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C$</div>
+        <div class="formula">$\displaystyle \int (ax+b)^n\,dx = \frac{(ax+b)^{\,n+1}}{a(n+1)} + C,\; n \neq -1$</div>
+      </div>
+
+      <div class="num">2.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{x}\,dx = \ln|x| + C$</div>
+        <div class="formula">$\displaystyle \int \frac{1}{ax+b}\,dx = \frac{\ln|ax-b|}{a} + C$</div>
+      </div>
+
+      <div class="num">3.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int e^{x}\,dx = e^{x} + C$</div>
+        <div class="formula">$\displaystyle \int e^{ax+b}\,dx = \frac{e^{ax+b}}{a} + C$</div>
+        <div class="formula">$\displaystyle \int a^{x}\,dx = \frac{a^{x}}{\ln a} + C$</div>
+        <div class="formula">$\displaystyle \int a^{px+q}\,dx = \frac{a^{px+q}}{p\,\ln a} + C$</div>
+      </div>
+
+      <div class="num">4.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \sin x\,dx = -\cos x + C$</div>
+        <div class="formula">$\displaystyle \int \sin(ax+b)\,dx = -\frac{\cos(ax+b)}{a} + C$</div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="num">5.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \cos x\,dx = \sin x + C$</div>
+        <div class="formula">$\displaystyle \int \cos(ax+b)\,dx = \frac{\sin(ax+b)}{a} + C$</div>
+      </div>
+
+      <div class="num">6.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \sec^2 x\,dx = \tan x + C$</div>
+        <div class="formula">$\displaystyle \int \sec^2(ax+b)\,dx = \frac{\tan(ax+b)}{a} + C$</div>
+      </div>
+
+      <div class="num">7.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int cosec^2 x\,dx = -\cot x + C$</div>
+        <div class="formula">$\displaystyle \int cosec^2(ax+b)\,dx = -\frac{\cot(ax+b)}{a} + C$</div>
+      </div>
+
+      <div class="num">8.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \sec x \cdot \tan x \, dx = \sec x + C$</div>
+        <div class="formula">$\displaystyle \int \sec(ax+b)\tan(ax+b)\,dx = \frac{\sec(ax+b)}{a} + C$</div>
+      </div>
+
+      <div class="num">9.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int cosec x \cdot \cot x \, dx = -cosec x + C$</div>
+        <div class="formula">$\displaystyle \int cosec(ax+b)\cot(ax+b)\,dx = -\frac{cosec(ax+b)}{a} + C$</div>
+      </div>
+
+      <div class="num">10.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{\sqrt{1-x^2}}\,dx = \sin^{-1}x + C = -\cos^{-1}x + C$</div>
+      </div>
+
+      <!-- New formulas -->
+      <div class="num">11.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{1+x^2}\,dx = \tan^{-1}x + C = \cot^{-1}x + C$</div>
+      </div>
+
+      <div class="num">12.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{|x|\sqrt{x^2-1}}\,dx = \sec^{-1}x + C = -cosec^{-1}x + C$</div>
+      </div>
+
+      <div class="num">13.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{\sqrt{a^2-x^2}}\,dx = \sin^{-1}\left(\frac{x}{a}\right) + C$</div>
+      </div>
+
+      <div class="num">14.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{x^2+a^2}\,dx = \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right) + C$</div>
+      </div>
+
+      <div class="num">15.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{|x|\sqrt{x^2-a^2}}\,dx = \frac{1}{a}\sec^{-1}\left(\frac{x}{a}\right) + C$</div>
+      </div>
+
+      <!-- Added boxed formulas -->
+      <div class="num">16.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{x^2}\,dx = -\frac{1}{x} + C$</div>
+      </div>
+
+      <div class="num">17.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \frac{1}{\sqrt{x}}\,dx = 2\sqrt{x} + C$</div>
+      </div>
+
+      <div class="num">18.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int k\,dx = kx + C$</div>
+      </div>
+
+      <!-- Trig boxed formulas -->
+      <div class="num">19.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \tan x \, dx = \ln|\sec x| + C$</div>
+      </div>
+
+      <div class="num">20.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \cot x \, dx = \ln|\sin x| + C$</div>
+      </div>
+
+      <div class="num">21.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int \sec x \, dx = \ln|\sec x + \tan x| + C$</div>
+      </div>
+
+      <div class="num">22.</div>
+      <div class="block">
+        <div class="formula">$\displaystyle \int cosec x \, dx = \ln|cosec x - \cot x| + C$</div>
+      </div>
+
+
+          </section>
+  </main>
+</body>
+</html>
